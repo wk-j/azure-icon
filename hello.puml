@@ -1,0 +1,17 @@
+@startuml
+
+!include <azure/AzureCommon.puml>
+!include <azure/AzureSimplified.puml>
+!include <azure/Management/AzureAutomation.puml>
+!include <azure/Storage/AzureDataLakeStorage.puml>
+!include <azure/Databases/AzureDatabaseForPostgreSQL.puml>
+!include <azure/Storage/AzureFileStorage.puml>
+!include <azure/Web/AzureCDN.puml>
+
+!include <cloudinsight/windows>
+
+' left to right direction
+skinparam handwritten true
+
+
+@enduml

@@ -5,7 +5,7 @@ open System.Text
 let icons = DirectoryInfo("icon/AWS").GetFiles("*.puml", SearchOption.AllDirectories)
 let builder = StringBuilder()
 
-builder.AppendLine "## Azure"
+builder.AppendLine "## AWS"
 builder.AppendLine()
 builder.AppendLine "| Include | Command  | Icon |"
 builder.AppendLine "|--|--|--|"

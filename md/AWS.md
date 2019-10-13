@@ -1,4 +1,4 @@
-## Azure
+## AWS
 
 | Include | Command  | Icon |
 |--|--|--|

@@ -20,7 +20,9 @@ left to right direction
 skinparam handwritten true
 ' skinparam monochrome true
 ' skinparam packageStyle rect
-skinparam defaultFontName Futura
+skinparam defaultFontName Plume
+skinparam defaultFontSize 30
+skinparam defaultFontColor Black
 skinparam shadowing false
 
 ' skinparam RectangleFontName Impact
@@ -30,9 +32,15 @@ skinparam shadowing false
 ' skinparam RectangleBorderColor White
 ' skinparam RectangleShadowing false
 
-AzureSqlStretchDatabase(a, "CDN", "")
-file "appsettings.json" as f
+AzureSqlStretchDatabase(cdn, "CDN", "")
+AzureFileStorage(storage, "Storage", "")
+AzureAutomation(batch, "Batch Upload", "")
 
-a -- f : "appsettings.json"
+file "appsettings.json" as file
+
+batch .. cdn
+batch .. file
+batch .. storage
+
 
 @enduml

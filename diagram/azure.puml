@@ -35,13 +35,16 @@ skinparam shadowing false
 
 AzureSqlStretchDatabase(cdn, "CDN", "")
 AzureFileStorage(storage, "Storage", "")
-AzureAutomation(batch, "Batch Upload", "")
+
+package App #black {
+    AzureAutomation(batch, "Batch Upload", "")
+}
 
 file "appsettings.json" as file
 
-batch .. cdn
-batch .. file
-batch .. storage
+batch .. cdn : convert
+batch .. file : write
+batch .. storage : save
 
 
 @enduml

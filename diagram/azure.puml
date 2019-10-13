@@ -1,3 +1,7 @@
+# Hello
+
+1. Hello, world!
+
 @startuml
 
 !include <azure/AzureCommon.puml>
@@ -14,8 +18,8 @@
 left to right direction
 
 skinparam handwritten true
-skinparam monochrome true
-skinparam packageStyle rect
+' skinparam monochrome true
+' skinparam packageStyle rect
 skinparam defaultFontName Futura
 skinparam shadowing false
 
@@ -27,8 +31,8 @@ skinparam shadowing false
 ' skinparam RectangleShadowing false
 
 AzureSqlStretchDatabase(a, "CDN", "")
-rectangle "<color:green><$AzureFileStorage></color>\nappsettings.json" as f
+file "appsettings.json" as f
 
-a -- f : "appsettings.json <$AzureAutomation>"
+a -- f : "appsettings.json"
 
 @enduml

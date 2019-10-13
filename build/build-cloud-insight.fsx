@@ -1,9 +1,13 @@
 open System.IO
+open System.Text
 
-let icons = DirectoryInfo("./CloudInsight").GetFiles("*.png")
+let icons = DirectoryInfo("icon/CloudInsight").GetFiles("*.png")
+let builder = StringBuilder()
 
-printfn "| Include | Command  | Icon |"
-printfn "|--|--|--|"
+builder.AppendLine("## Cloud Insight")
+builder.AppendLine()
+builder.AppendLine "| Include | Command  | Icon |"
+builder.AppendLine "|--|--|--|"
 
 for item in icons do
     let fullName = item.FullName
@@ -13,7 +17,7 @@ for item in icons do
     let dirName = item.Directory.Name
 
     let png =
-        "{dir}/{name}"
+        "../icon/{dir}/{name}"
             .Replace("{dir}", dirName)
             .Replace("{name}", name)
 
@@ -29,4 +33,7 @@ for item in icons do
         "`<${title}>`"
             .Replace("{title}", title)
 
-    printfn "|%s|%s|%s|" includes command md
+    let line = sprintf "|%s|%s|%s|" includes command md
+    builder.AppendLine line |> ignore
+
+File.WriteAllText("md/CloudInsight.md", builder.ToString())

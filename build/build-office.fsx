@@ -1,9 +1,13 @@
 open System.IO
+open System.Text
 
-let icons = DirectoryInfo("./Office").GetFiles("*.png", SearchOption.AllDirectories)
+let icons = DirectoryInfo("./icon/Office").GetFiles("*.png", SearchOption.AllDirectories)
+let builder = StringBuilder()
 
-printfn "| Include | Command  | Icon |"
-printfn "|--|--|--|"
+builder.AppendLine("## Office")
+builder.AppendLine()
+builder.AppendLine "| Include | Command  | Icon |"
+builder.AppendLine "|--|--|--|"
 
 for item in icons do
     let fullName = item.FullName
@@ -13,7 +17,7 @@ for item in icons do
     let dirName = item.Directory.Name
 
     let png =
-        "Office/{dir}/{name}"
+        "../icon/Office/{dir}/{name}"
             .Replace("{dir}", dirName)
             .Replace("{name}", name)
 
@@ -30,4 +34,7 @@ for item in icons do
         "`{title}`"
             .Replace("{title}", "OFF_" + title.ToUpper())
 
-    printfn "|%s|%s|%s|" includes command md
+    let line = sprintf "|%s|%s|%s|" includes command md
+    builder.AppendLine line |> ignore
+
+File.WriteAllText("md/Office.md", builder.ToString())

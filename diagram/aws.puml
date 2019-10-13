@@ -1,0 +1,13 @@
+@startuml
+
+
+!include<awslib/AWSCommon.puml>
+!include<awslib/InternetOfThings/IoTRule.puml>
+!include<awslib/Robotics/RoboMaker.puml>
+!include<awslib/MachineLearning/SageMakerModel.puml>
+
+IoTRule(a, "A", "B")
+
+component "<color:green><$SageMakerModel></color>" as myMLModel
+
+@enduml

@@ -1,0 +1,13 @@
+' Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+' SPDX-License-Identifier: CC-BY-ND-2.0 (For details, see https://github.com/awslabs/aws-icons-for-plantuml/blob/master/LICENSE)
+sprite $APIGatewayEndpoint [64x64/16z] {
+xPTL5W8m40D_sHIv_sbn7xRoWaDmibFNnVj9gKnSCd79nAKUl6eEuhG7SGRKtLBZIoq1UBMWkdCTT6MfXOCFc3MSFEmQdl4g22OUIdacG5nR1VdGTHJx_O3V
+RF-3Xt60tBF-GmaIFE6J182dF1CuV5xXv1b3ldlyVZ__vwbnFWuVDl-Kyl_x_y-hnIldGnkL6b-qKO0tzWzd_pBtJtl_pXCWd-DCW7oECu59nfU10rZKps_c
+-T4yl_hdP__yxjyV_FkBVt-YJBoUW7j_VJ-j
+}
+
+AWSEntityColoring(APIGatewayEndpoint)
+!define APIGatewayEndpoint(e_alias, e_label, e_techn) AWSEntity(e_alias, e_label, e_techn, #D6242D, APIGatewayEndpoint, APIGatewayEndpoint)
+!define APIGatewayEndpoint(e_alias, e_label, e_techn, e_descr) AWSEntity(e_alias, e_label, e_techn, e_descr, #D6242D, APIGatewayEndpoint, APIGatewayEndpoint)
+!define APIGatewayEndpointParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D6242D, APIGatewayEndpoint, APIGatewayEndpoint)
+!define APIGatewayEndpointParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #D6242D, APIGatewayEndpoint, APIGatewayEndpoint)

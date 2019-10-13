@@ -7,10 +7,28 @@
 !include <azure/Databases/AzureDatabaseForPostgreSQL.puml>
 !include <azure/Storage/AzureFileStorage.puml>
 !include <azure/Web/AzureCDN.puml>
+!include <azure/Databases/AzureSqlStretchDatabase.puml>
 
 !include <cloudinsight/windows>
 
-' left to right direction
+left to right direction
+
 skinparam handwritten true
+skinparam monochrome true
+skinparam packageStyle rect
+skinparam defaultFontName Futura
+skinparam shadowing false
+
+' skinparam RectangleFontName Impact
+' skinparam RectangleFontColor Orange
+' skinparam RectangleFontSize 20
+' skinparam RectangleBackgroundColor White
+' skinparam RectangleBorderColor White
+' skinparam RectangleShadowing false
+
+AzureSqlStretchDatabase(a, "CDN", "")
+rectangle "<color:green><$AzureFileStorage></color>\nappsettings.json" as f
+
+a -- f : "appsettings.json <$AzureAutomation>"
 
 @enduml

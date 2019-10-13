@@ -1,6 +1,6 @@
 open System.IO
 
-let icons = DirectoryInfo("PlantUML").GetFiles("*.puml", SearchOption.AllDirectories)
+let icons = DirectoryInfo("Azure").GetFiles("*.puml", SearchOption.AllDirectories)
 
 printfn "| Include | Command  | Icon |"
 printfn "|--|--|--|"
@@ -14,7 +14,7 @@ for item in icons do
 
 
     let png =
-        "PlantUML/{dir}/{name}" .Replace("{dir}", dirName) .Replace("{name}", title + ".png")
+        "Azure/{dir}/{name}" .Replace("{dir}", dirName) .Replace("{name}", title + ".png")
 
     let md = "![]({png})".Replace("{png}", png)
 

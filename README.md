@@ -1,9 +1,9 @@
 ## Icons
 
-- [Azure](md/Azure.md)
-- [AWS](md/AWS.md)
-- [Office](md/Office.md)
-- [Cloud Insight](md/CloudInsight.md)
+- [Azure](markdown/Azure.md)
+- [AWS](markdown/AWS.md)
+- [Office](markdown/Office.md)
+- [Cloud Insight](markdown/CloudInsight.md)
 
 ## Links
 

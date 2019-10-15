@@ -35,4 +35,4 @@ for item in icons do
         let line = sprintf "|%s|%s|%s|" includes command md
         builder.AppendLine line |> ignore
 
-File.WriteAllText("md/AWS.md", builder.ToString())
+File.WriteAllText("markdown/AWS.md", builder.ToString())

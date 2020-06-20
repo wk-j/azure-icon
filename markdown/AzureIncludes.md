@@ -1,6 +1,9 @@
 ## Azure
 
 ```
+!include <azure/AzureCommon.puml>
+!include <azure/AzureSimplified.puml>
+
 !include <azure/AIMachineLearning/AzureBatchAI.puml>
 !include <azure/AIMachineLearning/AzureBotService.puml>
 !include <azure/AIMachineLearning/MicrosoftGenomics.puml>

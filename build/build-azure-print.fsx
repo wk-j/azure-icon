@@ -8,6 +8,10 @@ let builder = StringBuilder()
 builder.AppendLine "## Azure"
 builder.AppendLine()
 builder.AppendLine("```")
+builder.AppendLine("!include <azure/AzureCommon.puml>")
+builder.AppendLine("!include <azure/AzureSimplified.puml>")
+builder.AppendLine()
+
 // builder.AppendLine "| Include | Command  | Icon |"
 // builder.AppendLine "|--|--|--|"
 
